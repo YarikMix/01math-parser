@@ -4,9 +4,9 @@
 
 Системные требования:
 
-⋅⋅*Windows 7 и выше
-⋅⋅*Python 3 и выше
-⋅⋅*ChromeDriver / geckodriver для вашей версии Chrome / Firefox
+*Windows 7 и выше
+Python 3 и выше
+*ChromeDriver / geckodriver для вашей версии Chrome / Firefox
 
 Скачиваем зависимости:
 ```bash

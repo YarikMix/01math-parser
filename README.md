@@ -1,12 +1,18 @@
-Скрипт для скачивания видео с сервиса Pornhub.
+Парсер сайта 01math.
 
 ### Как использовать:
+
+Системные требования:
+
+⋅⋅*Windows 7 и выше
+⋅⋅*Python 3 и выше
+⋅⋅*ChromeDriver / geckodriver для вашей версии Chrome / Firefox
 
 Скачиваем зависимости:
 ```bash
 pip3 install -r requirements.txt
 ```
-В файл auth_data.py вписываем свой логин и пароль от сайта 01math
+В файл auth_data.py вписываем свой логин и пароль от сайта 01math:
 ```bash
 login = ""  # Ваш логин
 password = ""  # Ваш пароль

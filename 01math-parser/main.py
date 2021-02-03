@@ -5,7 +5,7 @@ import pickle
 
 from selenium import webdriver
 
-from auth_data import login, password
+from config import login, password
 from data import tests_dict
 
 
@@ -44,7 +44,7 @@ class _01MathParser():
         self.driver.find_element_by_class_name("btn-primary").click()
         time.sleep(1)
 
-        #cookies
+        # cookies
         pickle.dump(self.driver.get_cookies(), open("cookies", "wb"))
 
     def get_data(self):
@@ -128,7 +128,7 @@ class _01MathParser():
 
                 self.get_data()
 
-                print(f"Данные собраны")
+                print("Данные собраны")
 
     def parse(self):
         self.test_name = input("> ")  # Пример: ЕГЭ.07.03
@@ -143,3 +143,4 @@ class _01MathParser():
 if __name__ == "__main__":
     Parser = _01MathParser()
     Parser.parse()
+    

@@ -2,11 +2,16 @@
 import time
 from pathlib import Path
 import pickle
+import yaml
 
 from selenium import webdriver
 
 from config import login, password
 from data import tests_dict
+
+
+with open("config.yaml") as ymlFile:
+    config = yaml.load(ymlFile.read(), Loader=yaml.Loader)
 
 
 class _01MathParser():
@@ -36,10 +41,10 @@ class _01MathParser():
         self.driver.get(self.LOGIN_URL)
 
         login_input = self.driver.find_element_by_name("login_or_email")
-        login_input.send_keys(login)
+        login_input.send_keys(config["login"])
 
         password_input = self.driver.find_element_by_name("pwd")
-        password_input.send_keys(password)
+        password_input.send_keys(config["password"])
 
         self.driver.find_element_by_class_name("btn-primary").click()
         time.sleep(1)
